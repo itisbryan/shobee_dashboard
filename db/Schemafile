@@ -1,0 +1,7 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+schema_dir = File.expand_path('schema', __dir__)
+
+Dir[File.join(schema_dir, '**', '*.rb')].each do |migration|
+  require migration
+end
